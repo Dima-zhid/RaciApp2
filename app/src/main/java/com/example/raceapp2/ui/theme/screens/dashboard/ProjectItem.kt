@@ -5,6 +5,6 @@ data class ProjectItem(
     val name: String,
     val taskCount: Int,
     val ownerName: String? = null,
-    val participants: List<String> = emptyList() // <-- добавлено
+    val participants: List<String> = emptyList()
 )
 
