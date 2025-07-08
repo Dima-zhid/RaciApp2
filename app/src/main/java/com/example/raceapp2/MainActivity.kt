@@ -47,7 +47,6 @@ class MainActivity : ComponentActivity() {
                     )
                 }
 
-                // Мутируемый список персонажей, чтобы изменения обновляли UI
                 val characters = remember {
                     mutableStateListOf(
                         Character("1", "admin", "1234567890", "Администратор системы"),

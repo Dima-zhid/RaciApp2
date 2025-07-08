@@ -14,11 +14,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.example.raceapp2.ui.screens.dashboard.UserRole
 
-// Добавил поле positions для списка должностей
+
 data class Character(
     val id: String,
     val login: String,
-    val phone: String?, // можно оставить, но не используем
+    val phone: String?,
     val description: String,
     val positions: List<String> = emptyList()
 )
@@ -242,7 +242,7 @@ fun PositionsEditor(
     positions: List<String>,
     onPositionsChange: (List<String>) -> Unit
 ) {
-    var localPositions by remember { mutableStateOf(positions) }  // иммутабельный список
+    var localPositions by remember { mutableStateOf(positions) }
 
     Column {
         localPositions.forEachIndexed { index, pos ->

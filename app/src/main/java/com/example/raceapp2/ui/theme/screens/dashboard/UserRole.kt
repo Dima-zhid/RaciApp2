@@ -1,4 +1,4 @@
-package com.example.raceapp2.ui.screens.dashboard // Убедитесь, что пакет правильный
+package com.example.raceapp2.ui.screens.dashboard
 
 
 

@@ -63,8 +63,6 @@ fun LoginScreen(
                 Text("Войти")
             }
         }
-        // Здесь можно добавить Text для отображения ошибок,
-        // или ссылку "Забыли пароль?"
     }
 }
 
@@ -72,7 +70,7 @@ fun LoginScreen(
 @Composable
 fun LoginScreenPreview() {
     RaceApp2Theme {
-        LoginScreen(onLoginClick = { _, _ -> /* Демо-действие */}, isLoading = false)
+        LoginScreen(onLoginClick = { _, _ -> }, isLoading = false)
     }
 }
 

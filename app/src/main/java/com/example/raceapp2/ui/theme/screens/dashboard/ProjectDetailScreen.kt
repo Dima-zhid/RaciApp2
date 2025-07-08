@@ -1,4 +1,4 @@
-package com.example.raceapp2.ui.screens.dashboard // или com.example.raceapp2.ui.screens.projectdetail
+package com.example.raceapp2.ui.screens.dashboard
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
@@ -16,12 +16,12 @@ import androidx.navigation.NavController
 @Composable
 fun ProjectDetailScreen(
     navController: NavController,
-    projectId: String?, // ID проекта, который нужно отобразить/редактировать
-    projectManager: String? // Опционально: Имя менеджера для отображения
+    projectId: String?,
+    projectManager: String?
 ) {
     var taskName by remember { mutableStateOf("") }
     var taskDescription by remember { mutableStateOf("") }
-    // Добавьте другие поля формы, которые вам нужны
+
 
     Scaffold(
         topBar = {
@@ -50,7 +50,7 @@ fun ProjectDetailScreen(
 
             OutlinedTextField(
                 value = taskName,
-                onValueChange = { taskName = it },
+                onValueChange = { taskName = it},
                 label = { Text("Название задачи") },
                 modifier = Modifier.fillMaxWidth()
             )
@@ -62,17 +62,9 @@ fun ProjectDetailScreen(
                 modifier = Modifier.fillMaxWidth(),
                 minLines = 3
             )
-
-            // Здесь могут быть другие поля формы: выбор исполнителя, даты, статуса и т.д.
-
             Button(
                 onClick = {
-                    // Логика сохранения данных формы
-                    // Например, можно передать данные в ViewModel или вызвать lambda-функцию
-                    // После сохранения можно вернуться назад: navController.popBackStack()
-                    // Пока просто выведем в лог или покажем Toast
                     println("Сохранение данных для проекта $projectId: Задача - $taskName, Описание - $taskDescription")
-                    // Для примера, после "сохранения" вернемся назад
                     navController.popBackStack()
                 },
                 modifier = Modifier.fillMaxWidth()
