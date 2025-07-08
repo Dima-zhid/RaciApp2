@@ -51,7 +51,7 @@ fun LoginScreen(
 
         Button(
             onClick = { onLoginClick(username, password) },
-            enabled = !isLoading, // Кнопка неактивна во время загрузки
+            enabled = !isLoading,
             modifier = Modifier.fillMaxWidth()
         ) {
             if (isLoading) {
