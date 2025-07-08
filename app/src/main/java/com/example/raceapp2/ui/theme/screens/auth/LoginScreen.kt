@@ -15,7 +15,7 @@ import com.example.raceapp2.ui.theme.RaceApp2Theme
 @Composable
 fun LoginScreen(
     onLoginClick: (String, String) -> Unit, // Лямбда для обработки нажатия кнопки входа
-    isLoading: Boolean // Флаг для отображения индикатора загрузки
+    isLoading: Boolean
 ) {
     var username by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
